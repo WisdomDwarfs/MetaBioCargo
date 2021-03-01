@@ -1,0 +1,12 @@
+/home/deltalab/Projects/MetaBioCargo/biocargo/target/debug/deps/notify-1b6daa387568e4c9.rmeta: /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/lib.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/inotify.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/null.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/poll.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/mod.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/timer.rs
+
+/home/deltalab/Projects/MetaBioCargo/biocargo/target/debug/deps/libnotify-1b6daa387568e4c9.rlib: /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/lib.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/inotify.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/null.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/poll.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/mod.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/timer.rs
+
+/home/deltalab/Projects/MetaBioCargo/biocargo/target/debug/deps/notify-1b6daa387568e4c9.d: /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/lib.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/inotify.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/null.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/poll.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/mod.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/timer.rs
+
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/lib.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/inotify.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/null.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/poll.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/mod.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/notify-4.0.15/src/debounce/timer.rs:

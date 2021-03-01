@@ -1,0 +1,14 @@
+[package]
+authors = ["Ali2210 <AliMatrixCode@protonmail.com>"]
+edition = "2018"
+name = "biocargo"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.7"
+serde = {version = "1.0", features = ["derive"]}
+[dependencies.rocket_contrib]
+features = ["handlebars_templates", "tera_templates"]
+version = "0.4.5"

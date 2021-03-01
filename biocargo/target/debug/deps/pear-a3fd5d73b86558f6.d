@@ -1,0 +1,13 @@
+/home/deltalab/Projects/MetaBioCargo/biocargo/target/debug/deps/pear-a3fd5d73b86558f6.rmeta: /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs
+
+/home/deltalab/Projects/MetaBioCargo/biocargo/target/debug/deps/libpear-a3fd5d73b86558f6.rlib: /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs
+
+/home/deltalab/Projects/MetaBioCargo/biocargo/target/debug/deps/pear-a3fd5d73b86558f6.d: /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs /home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs
+
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/lib.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/macros.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/input.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/result.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/debug.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/combinators.rs:
+/home/deltalab/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.4/src/parsers.rs:
