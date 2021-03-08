@@ -1,0 +1,188 @@
+<head>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
+        integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
+    <style>
+        .uk-container {
+            display: flexbox;
+            margin-top: 80px;
+            width: max-content;
+            background: padding-box;
+            border: 2px whitesmoke dotted;
+
+        }
+
+        .uk-progress {
+            display: flow-root;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .uk-button-default {
+            border-radius: 10px;
+            background-color: black;
+            color: whitesmoke;
+            height: max-content;
+        }
+
+        .uk-link {
+            color: green;
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+        }
+
+        .uk-form-custom {
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }
+
+        .uk-text-middle {
+            display: flex;
+            border: 2px whitesmoke dotted;
+        }
+
+        .uk-navbar-dropdown-nav,
+        .uk-navbar-dropdown {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="uk-container">
+        <nav class="uk-navbar-container uk-margin" uk-navbar>
+            <div class="uk-navbar-center">
+
+                <div class="uk-navbar-center-left">
+                    <div>
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-active"><a href="#"><i class="fas fa-building"> About</i></a></li>
+                            <li>
+                                <a href="#"><i class="fas fa-disease"> Engineering </i> </a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-active"><a href="#"><i class="fas fa-cloud">Virtual Cluster</i>
+                                                </i> </a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-book"></i> Docs </a></li>
+                                        <li><a href="#"><i class="fas fa-archive"> Crates </i></a></li>
+                                        <li><a href="#"><i class="fas fa-satellite-dish"> Discoveries </i></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="uk-navbar-item uk-logo" href=""> MetaBioCargo</a>
+                <div class="uk-navbar-center-right">
+                    <div>
+                        <ul class="uk-navbar-nav">
+                            <li><a href="#"><i class="fas fa-user-plus"> Are you member? </i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="uk-container main">
+        <form class="uk-form-horizontal" method="POST" action="/translation/form"
+            enctype="application/x-www-form-urlencoded">
+            <div class="js-upload uk-placeholder uk-text-center">
+                <span uk-icon="icon: cloud-upload"></span>
+                <span id="describe" class="uk-text-middle"> Attached Bactericum (Bacteria) Genetic Code Sequence File
+                </span>
+                <div class="uk-form-custom ">
+                    <input type="file" id="fileID"> or just drop your File Here...
+                    <span class="uk-link"> Upload_Files </span>
+                </div>
+            </div>
+            <progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
+            <div class="uk-container">
+                <button class="uk-button uk-button-default">
+                    <i class="far fa-file-check "> Submit </i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script>
+
+        var bar = document.getElementById('js-progressbar');
+        UIkit.upload('.js-upload', {
+
+            url: '/translation/form',
+            multiple: true,
+
+
+            beforeSend: function () {
+                console.log("beforeSend:", content.files[length]);
+                console.log('beforeSend', arguments);
+            },
+            beforeAll: function () {
+                console.log("beforeAll:", content.files[length]);
+                console.log('beforeAll', arguments);
+            },
+            load: function () {
+                console.log("load:", content.files[length]);
+                console.log('load', arguments);
+            },
+            error: function () {
+                console.log("error:", content.files[length]);
+                console.log('error', arguments);
+            },
+            complete: function (e) {
+                console.log("complete:", content.files[length]);
+                console.log('complete', arguments);
+            },
+
+            loadStart: function (e) {
+                console.log('loadStart', arguments);
+                console.log("loadStart:", content.files[length]);
+                bar.removeAttribute('hidden');
+                bar.max = e.total;
+                bar.value = e.loaded;
+            },
+
+            progress: function (e) {
+                console.log('progress', arguments);
+                console.log("progress:", content.files[length]);
+
+                bar.max = e.total;
+                bar.value = e.loaded;
+            },
+
+            loadEnd: function (e) {
+                console.log('loadEnd', arguments);
+                console.log("loadEnd:", content.files[length]);
+
+                bar.max = e.total;
+                bar.value = e.loaded;
+            },
+
+            completeAll: function () {
+                console.log('completeAll', arguments);
+                console.log("complete:", content.files[length]);
+
+                setTimeout(function () {
+                    bar.setAttribute('hidden', 'hidden');
+                }, 1000);
+
+
+                alert('Upload Completed');
+            },
+            readystatechange: function () {
+                console.log("readystatechange:", arguments);
+            }
+
+        });
+
+    </script>
+</body>
