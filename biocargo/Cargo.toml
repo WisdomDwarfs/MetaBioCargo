@@ -9,6 +9,10 @@ version = "0.1.0"
 [dependencies]
 rocket = "0.4.7"
 serde = {version = "1.0", features = ["derive"]}
+
 [dependencies.rocket_contrib]
 features = ["handlebars_templates", "tera_templates"]
 version = "0.4.5"
+
+[dependencies.rocket-multipart-form-data]
+version = "0.9.6"
