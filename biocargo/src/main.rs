@@ -36,26 +36,9 @@ fn parse_form(content_type: &ContentType, input: Data) -> &'static str {
             .unwrap(),
         MultipartFormDataField::raw("fingerprint").size_limit(50000 * 1024),
     ]);
-    // let plain_text: mime::Mime = "text/plain".parse().unwrap();
+
     let formdata = MultipartFormData::parse(content_type, input, opts);
-    // let upload_file = value.files.get("files");
-    // let file_fingerprint = value.raw.remove("fingerprint");
     println!("@param_value{:#?}:", formdata);
-    // println!("@param_fingerprint {:#?}:", file_fingerprint);
-    // if let Some(fields) = upload_file {
-    //     let file_fields = &fields[0];
-    //     let _content_type = &file_fields.content_type;
-    //     let _filename = &file_fields.file_name;
-    //     let _path = &file_fields.path;
-    //     println!("@param_field: {:#?}", file_fields);
-    // }
-    // if let Some(mut raw_fingerprints) = file_fingerprint {
-    //     let raw_data = &raw_fingerprints.remove(0);
-    //     let _content_type = &raw_data.content_type;
-    //     let _filename = &raw_data.file_name;
-    //     let _raw = &raw_data.raw;
-    //     println!("@param_raw: {:#?}", raw_data);
-    // }
     "ok"
 }
 
