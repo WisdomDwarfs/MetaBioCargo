@@ -6,13 +6,11 @@ extern crate rocket_multipart_form_data;
 
 use rocket::http::ContentType;
 // use rocket::request;
-use rocket::Data;
-use rocket::Request;
+use rocket::{Data, Request};
 use rocket_contrib::templates::Template;
-use rocket_multipart_form_data::mime;
-use rocket_multipart_form_data::MultipartFormData;
-use rocket_multipart_form_data::MultipartFormDataField;
-use rocket_multipart_form_data::MultipartFormDataOptions;
+use rocket_multipart_form_data::{
+    mime, MultipartFormData, MultipartFormDataField, MultipartFormDataOptions,
+};
 use serde::Serialize;
 
 #[get("/")]
@@ -30,36 +28,34 @@ fn get_files() -> Template {
     let context = Context {};
     Template::render("dashboard", context)
 }
-
-// #[derive(FromForm)]
-// struct FileInput {
-//     data_stream: String,
-// }
 #[post("/translation/form", data = "<input>")]
-fn parse_form(content: &ContentType, input: Data) -> &'static str {
+fn parse_form(content_type: &ContentType, input: Data) -> &'static str {
     let opts = MultipartFormDataOptions::with_multipart_form_data_fields(vec![
         MultipartFormDataField::file("file")
-            .content_type_by_string(Some(mime::TEXT))
+            .content_type_by_string(Some(mime::APPLICATION_WWW_FORM_URLENCODED))
             .unwrap(),
         MultipartFormDataField::raw("fingerprint").size_limit(50000 * 1024),
     ]);
-    let mut mult_part_data = MultipartFormData::parse(content, input, opts).unwrap();
-    let file_instance = mult_part_data.files.get("files");
-    let file_fing = mult_part_data.raw.remove("fingerprint");
-
-    if let Some(file_fields) = file_instance {
-        let file_field = &file_fields[0];
-
-        let _content_type = &file_field.content_type;
-        let _file_name = &file_field.file_name;
-        let _path = &file_field.path;
-    } else if let Some(mut raw_fields) = file_fing {
-        let raw_field = raw_fields.remove(0);
-
-        let _content_type = raw_field.content_type;
-        let _file_name = raw_field.file_name;
-        let _raw = raw_field.raw;
-    }
+    // let plain_text: mime::Mime = "text/plain".parse().unwrap();
+    let formdata = MultipartFormData::parse(content_type, input, opts);
+    // let upload_file = value.files.get("files");
+    // let file_fingerprint = value.raw.remove("fingerprint");
+    println!("@param_value{:#?}:", formdata);
+    // println!("@param_fingerprint {:#?}:", file_fingerprint);
+    // if let Some(fields) = upload_file {
+    //     let file_fields = &fields[0];
+    //     let _content_type = &file_fields.content_type;
+    //     let _filename = &file_fields.file_name;
+    //     let _path = &file_fields.path;
+    //     println!("@param_field: {:#?}", file_fields);
+    // }
+    // if let Some(mut raw_fingerprints) = file_fingerprint {
+    //     let raw_data = &raw_fingerprints.remove(0);
+    //     let _content_type = &raw_data.content_type;
+    //     let _filename = &raw_data.file_name;
+    //     let _raw = &raw_data.raw;
+    //     println!("@param_raw: {:#?}", raw_data);
+    // }
     "ok"
 }
 
